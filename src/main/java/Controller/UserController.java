@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import service.UserService;
-import service.UserServiceImpl;
 
 @Controller
 public class UserController {
@@ -27,6 +26,6 @@ public class UserController {
     public String allUsers(Model model) {
         model.addAttribute("user", new User());
         model.addAttribute("allUsers", this.userService.getAllUsers());
-        return "allUsers";
+        return "read";
     }
 }
