@@ -21,6 +21,8 @@ public class UserController {
         this.userService = userService;
     }
 
+    //маппимся на ссылку read, метод GET для получения списка всех юзеров
+    //аналог ReadServlet
     @RequestMapping(value = "read", method = RequestMethod.GET)
     public String allUsers(Model model) {
         model.addAttribute("user", new User());

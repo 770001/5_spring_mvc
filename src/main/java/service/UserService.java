@@ -9,11 +9,15 @@ import java.util.List;
  */
 public interface UserService {
 
-    List<User> getAllUsers();
     void addUser(User user);
+
+    void updateUser(User user);
+
+    void deleteUser(long id);
+
     User getUserById(long id);
-    boolean updateUser(User user);
-    boolean deleteUser(long id);
+
+    List<User> getAllUsers();
 
     User getUserByNameAndSurname(String reqName, String reqSurname); //новый метод для login
 }
