@@ -1,8 +1,7 @@
-package dao;
+package com.khilkevichigor.springmvc.dao;
 
-import model.User;
+import com.khilkevichigor.springmvc.model.User;
 
-import java.sql.SQLException;
 import java.util.List;
 
 /*

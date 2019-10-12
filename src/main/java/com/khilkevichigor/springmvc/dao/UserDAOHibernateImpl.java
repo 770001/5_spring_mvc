@@ -1,54 +1,56 @@
-package dao;
+package com.khilkevichigor.springmvc.dao;
 
-import model.User;
+import com.khilkevichigor.springmvc.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /*
 Реализация на Hibernate, синглтон. Настройки из DBHelper.
  */
-@Repository
+@Repository //класс который является DAO
 public class UserDAOHibernateImpl implements UserDAO {
 
     private SessionFactory sessionFactory;
 
+    @Autowired
     public void setSessionFactory(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
-    //взять всех юзеров
     @Override
+    //взять всех юзеров
     public List<User> getAllUsers() {
         Session session = this.sessionFactory.getCurrentSession();
         List<User> allUsers = session.createQuery("from User").list();
         return allUsers;
     }
 
-    //добавить юзера
     @Override
+    //добавить юзера
     public void addUser(User user) {
         Session session = this.sessionFactory.getCurrentSession();
         session.persist(user);
     }
 
-    //обновить юзера
     @Override
+    //обновить юзера
     public void updateUser(User user) {
         Session session = this.sessionFactory.getCurrentSession();
         session.update(user);
     }
 
-    //взять юзера по id
     @Override
+    //взять юзера по id
     public User getUserById(long id) {
         Session session = this.sessionFactory.getCurrentSession();
         return (User) session.load(User.class, id);
     }
 
-    //удалить юзера
     @Override
+    //удалить юзера
     public void deleteUser(long id) {
         Session session = this.sessionFactory.getCurrentSession();
         User user = (User) session.load(User.class, id);
@@ -57,8 +59,8 @@ public class UserDAOHibernateImpl implements UserDAO {
         }
     }
 
-    //достаем юзера по имени и фамилии (логин пароль)
     @Override
+    //достаем юзера по имени и фамилии (логин пароль)
     public User getUserByNameAndSurname(String name, String surname) {
         Session session = this.sessionFactory.getCurrentSession();
         List<User> users = (List<User>) session.load(User.class, name);

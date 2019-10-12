@@ -1,4 +1,4 @@
-package model;
+package com.khilkevichigor.springmvc.model;
 
 import javax.persistence.*;
 

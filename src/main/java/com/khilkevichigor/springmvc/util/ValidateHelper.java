@@ -1,8 +1,15 @@
-package util;
+package com.khilkevichigor.springmvc.util;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 /*
 Проверка вводимых данных с веб-странички.
  */
+@Component
+@Scope("singleton")
 public class ValidateHelper {
     //проверка ввода String name, surname, age
     public static boolean isValidate(String name, String surname, String age) {

@@ -1,6 +1,6 @@
-package service;
+package com.khilkevichigor.springmvc.service;
 
-import model.User;
+import com.khilkevichigor.springmvc.model.User;
 
 import java.util.List;
 
