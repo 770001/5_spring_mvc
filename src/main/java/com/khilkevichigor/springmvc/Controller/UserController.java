@@ -59,7 +59,7 @@ public class UserController {
     //обновляем юзера
     @RequestMapping(value = "update", method = RequestMethod.POST)
     public ModelAndView updateUser(@ModelAttribute("user") User user) {
-        ModelAndView modelAndView = new ModelAndView();
+        ModelAndView modelAndView = new ModelAndView(); 
         modelAndView.setViewName("redirect:/read");
         userService.updateUser(user);
         return modelAndView;
