@@ -1,6 +1,7 @@
 package com.khilkevichigor.springmvc.service;
 
 import com.khilkevichigor.springmvc.dao.UserDAO;
+import com.khilkevichigor.springmvc.dao.UserDAOHibernateImpl;
 import com.khilkevichigor.springmvc.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -11,8 +12,8 @@ import java.util.List;
 /*
 Реализация сервиса.
  */
-@Service //класс который является сервисом
-@Scope("singleton")
+@Service("userService") //класс который является сервисом
+//@Scope("singleton")
 public class UserServiceImpl implements UserService {
 
     private UserDAO userDAO;
@@ -50,12 +51,12 @@ public class UserServiceImpl implements UserService {
         this.userDAO.updateUser(user);
     }
 
-    @Override
-    @Transactional
-    //получаем юзера по имени и фамилии (логин пароль)
-    public User getUserByNameAndSurname(String name, String surname) {
-        return this.userDAO.getUserByNameAndSurname(name, surname);
-    }
+//    @Override
+//    @Transactional
+//    //получаем юзера по имени и фамилии (логин пароль)
+//    public User getUserByNameAndSurname(String name, String surname) {
+//        return this.userDAO.getUserByNameAndSurname(name, surname);
+//    }
 
     @Override
     @Transactional

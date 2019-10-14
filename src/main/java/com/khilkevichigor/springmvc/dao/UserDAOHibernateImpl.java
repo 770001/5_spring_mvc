@@ -21,6 +21,7 @@ public class UserDAOHibernateImpl implements UserDAO {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     //взять всех юзеров
     public List<User> getAllUsers() {
         Session session = this.sessionFactory.getCurrentSession();
@@ -59,17 +60,17 @@ public class UserDAOHibernateImpl implements UserDAO {
         }
     }
 
-    @Override
-    //достаем юзера по имени и фамилии (логин пароль)
-    public User getUserByNameAndSurname(String name, String surname) {
-        Session session = this.sessionFactory.getCurrentSession();
-        List<User> users = (List<User>) session.load(User.class, name);
-        User user = null;
-        for (User u : users) {
-            if (u.getSurname().equals(surname)) {
-                user = u;
-            }
-        }
-        return user;
-    }
+//    @Override
+//    //достаем юзера по имени и фамилии (логин пароль)
+//    public User getUserByNameAndSurname(String name, String surname) {
+//        Session session = this.sessionFactory.getCurrentSession();
+//        List<User> users = (List<User>) session.load(User.class, name);
+//        User user = null;
+//        for (User u : users) {
+//            if (u.getSurname().equals(surname)) {
+//                user = u;
+//            }
+//        }
+//        return user;
+//    }
 }
