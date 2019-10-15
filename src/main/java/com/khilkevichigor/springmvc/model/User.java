@@ -23,40 +23,6 @@ public class User {
     @Column(name = "age")
     private int age;
 
-//    @Column(name = "role")
-//    private String role;
-
-//    public User() {
-//    }
-
-//    public User(String name, String surname, int age) {
-//        this.name = name;
-//        this.surname = surname;
-//        this.age = age;
-//    }
-
-//    public User(long id, String name, String surname, int age) {
-//        this.name = name;
-//        this.surname = surname;
-//        this.id = id;
-//        this.age = age;
-//    }
-
-//    public User(String name, String surname, String role, int age) {
-//        this.name = name;
-//        this.surname = surname;
-//        this.role = role;
-//        this.age = age;
-//    }
-
-//    public User(long id, String name, String surname, String role, int age) {
-//        this.id = id;
-//        this.name = name;
-//        this.surname = surname;
-//        this.role = role;
-//        this.age = age;
-//    }
-
     public long getId() {
         return id;
     }
@@ -88,12 +54,4 @@ public class User {
     public void setAge(int age) {
         this.age = age;
     }
-
-//    public String getRole() {
-//        return role;
-//    }
-
-//    public void setRole(String role) {
-//        this.role = role;
-//    }
 }

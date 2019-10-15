@@ -18,6 +18,4 @@ public interface UserService {
     User getUserById(long id);
 
     List<User> getAllUsers();
-
-//    User getUserByNameAndSurname(String reqName, String reqSurname); //новый метод для login
 }

@@ -18,6 +18,4 @@ public interface UserDAO {
     User getUserById(long id);
 
     List<User> getAllUsers();
-
-//    User getUserByNameAndSurname(String name, String surname); //новый метод для login
 }
