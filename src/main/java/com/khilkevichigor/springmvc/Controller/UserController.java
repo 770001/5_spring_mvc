@@ -40,7 +40,6 @@ public class UserController {
         return "redirect:/users";
     }
 
-    //NOTE! Используется .opensession() в DAO
     //получаем страницу edit
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public String editPage(@PathVariable("id") long id, Model model) {

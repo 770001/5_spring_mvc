@@ -46,7 +46,7 @@ public class UserDAOHibernateImpl implements UserDAO {
     @Override
     //взять юзера по id
     public User getUserById(long id) {
-        Session session = this.sessionFactory.openSession();
+        Session session = this.sessionFactory.getCurrentSession();
         return (User) session.load(User.class, id);
     }
 

@@ -11,7 +11,6 @@ import java.util.List;
 Реализация сервиса.
  */
 @Service("userService") //класс который является сервисом
-//@Scope("singleton")
 public class UserServiceImpl implements UserService {
 
     private UserDAO userDAO;
