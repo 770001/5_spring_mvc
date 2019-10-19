@@ -14,7 +14,7 @@ public class UserController {
     private UserService userService;
 
     @Autowired//автоматическое связывание(завсимость класса UserController и интерфейса UserService)
-    @Qualifier(value = "userService") //уточнитель (автосвязывание на класс реализующий интерфейс UserService)
+//    @Qualifier(value = "userService") //уточнитель (автосвязывание на класс реализующий интерфейс UserService)
     public void setUserService(UserService userService) {
         this.userService = userService;
     }

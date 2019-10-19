@@ -12,7 +12,7 @@ public class User {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long id; //через обертку
 
     @Column(name = "name")
     private String name;

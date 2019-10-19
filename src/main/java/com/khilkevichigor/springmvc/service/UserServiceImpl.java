@@ -11,6 +11,7 @@ import java.util.List;
 Реализация сервиса.
  */
 @Service("userService") //класс который является сервисом
+@Transactional
 public class UserServiceImpl implements UserService {
 
     private UserDAO userDAO;
@@ -21,35 +22,35 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional //класс поддерживает транзакции
+//    @Transactional //класс поддерживает транзакции
     //взять всех юзеров
     public List<User> getAllUsers() {
         return this.userDAO.getAllUsers();
     }
 
     @Override
-    @Transactional
+//    @Transactional
     //взять юзера по id
     public User getUserById(long id) {
         return this.userDAO.getUserById(id);
     }
 
     @Override
-    @Transactional
+//    @Transactional
     //добавить юзера
     public void addUser(User user) {
         this.userDAO.addUser(user);
     }
 
     @Override
-    @Transactional
+//    @Transactional
     //обновить юзера
     public void updateUser(User user) {
         this.userDAO.updateUser(user);
     }
 
     @Override
-    @Transactional
+//    @Transactional
     //удалить юзера
     public void deleteUser(long id) {
         this.userDAO.deleteUser(id);
