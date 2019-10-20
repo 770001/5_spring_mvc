@@ -1,3 +1,7 @@
+/**
+ * сделать круд  на hibernate + spring MVC
+ */
+
 package com.khilkevichigor.springmvc.config;
 
 import org.springframework.web.filter.CharacterEncodingFilter;
