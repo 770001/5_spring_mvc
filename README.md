@@ -1,4 +1,4 @@
-# JM_PREPROJECT5.1
+# 5SpringMVC
 Task#5 crud hibernate spring mvc
 Трудности: 
 1) кодировка UTF8 - решилось добавлением "?....." к URL к БД
